@@ -2,18 +2,18 @@
 
 這是一個使用 C# Windows Forms 開發的桌面應用程式，主要功能為讀取以 Tab 鍵分隔的資料檔（TSV 或 TXT 格式），並將其內容（例如：單字、音標、音檔路徑及解釋）結構化地顯示於表格 (ListView) 中，方便使用者瀏覽與檢視。
 
-## 📝 專案簡介
+## 專案簡介
 
 本專案實作了基礎的檔案 I/O 操作與自訂物件集合管理，適合用於讀取簡易的自建字典檔或單字卡資料。
 
-### ✨ 功能特色
+### 功能特色
 * **支援多種副檔名**：可讀取 `.tsv` 以及 `.txt` 格式的純文字檔案。
 * **UTF-8 編碼支援**：確保讀取包含中文或其他多國語言的資料時不會產生亂碼。
 * **資料解析與顯示**：自動將每行資料依據 Tab (`\t`) 符號切割，並對應至「單字」、「音標」、「音檔路徑」與「解釋」四個欄位。若解釋欄位含有多段內容，程式會自動將其合併並換行顯示。
 * **狀態列提示**：成功讀取檔案後，視窗底部狀態列會顯示成功載入的單字總數。
 * **防呆機制**：關閉程式時會彈出確認視窗，避免使用者誤觸導致未預期的關閉。
 
-## 📂 專案架構
+## 專案架構
 
 本專案包含以下核心類別：
 
@@ -23,7 +23,7 @@
 * **`WordItem.cs`**：資料模型類別，代表單一單字項目。內建字串處理邏輯，能在建構時將傳入的單行字串解析為對應屬性。
 * **`WordCollection.cs`**：繼承自 `Collection<WordItem>` 的自訂集合類別，負責批次處理字串陣列並轉換為 `WordItem` 物件清單。
 
-## 🚀 執行說明
+## 執行說明
 
 ### 系統需求
 * Windows 作業系統
@@ -46,12 +46,18 @@
 
 ### 1. 程式主畫面
 資料讀取前的主視窗介面，包含清晰的資料欄位標題。
-![主畫面](image_b0cec6.png)
+<img width="747" height="485" alt="image" src="https://github.com/user-attachments/assets/5af86541-3c5b-4655-ac0c-fd8c1629cd46" />
+
 
 ### 2. 檔案選單
 提供開啟檔案 (`OpenFileDialog`) 與離開程式的功能。
-![檔案選單](image_b0cee6.png)
+<img width="749" height="486" alt="image" src="https://github.com/user-attachments/assets/bdcf50c2-6263-4550-8cf8-f90b090a3d2a" />
+<img width="932" height="587" alt="image" src="https://github.com/user-attachments/assets/dd029155-9c3e-4081-ae8b-3603d1e06058" />
+<img width="750" height="486" alt="image" src="https://github.com/user-attachments/assets/f17ccf66-f83b-4ca2-8e2b-8fee38d100a1" />
+
 
 ### 3. 幫助選單
 可呼叫出「關於」視窗檢視程式版本資訊。
-![幫助選單](image_b0cf0b.png)
+<img width="750" height="485" alt="image" src="https://github.com/user-attachments/assets/941c8e5a-a05d-4987-858d-3d191b823de4" />
+<img width="749" height="484" alt="image" src="https://github.com/user-attachments/assets/931f39fe-a9ad-4136-b9a2-27f607b1c80c" />
+
